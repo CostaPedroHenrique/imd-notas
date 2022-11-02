@@ -24,8 +24,6 @@ export const CalcFormProvider: React.FC<ICalcFormProviderProps> = ({
       duration: 10000,
       isClosable: true,
     })
-
-    form.reset()
   })
  
   return (

@@ -16,13 +16,11 @@ const NumberInput = ({ control, name }: INumberInputProps) => {
       }}
       render={({ field: { ref, onChange, value, ...restField } }) => (
         <Input
-          {...restField}
+          // {...restField}
           ref={ref}
           min={0}
           max={10}
           value={value}
-          precision={2}
-          step={0.2}
           onChange={onChange}
         >
           <NumberInputField />

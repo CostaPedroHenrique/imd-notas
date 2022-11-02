@@ -3,8 +3,8 @@ import {
   Button,
   FormControl,
   FormLabel,
-  Input,
 } from '@chakra-ui/react'
+import NumberInput from '../NumberInput'
 import { CalcFormProvider, useCalcForm } from './context'
 
 const CalcFormComponent = () => {
@@ -14,55 +14,19 @@ const CalcFormComponent = () => {
       <Box gap={'8px'}>
         <FormControl>
           <FormLabel htmlFor='virtualParticipation'>Participação Virtual</FormLabel>
-          <Input
-            type="number"
-            min={0}
-            max={10}
-            id='virtualParticipation'
-            placeholder='Participação Virtual'
-            {...form.register('virtualParticipation', {
-              required: 'Obrigatório',
-            })}
-          />
+          <NumberInput control={form.control} name={'virtualParticipation'} />
         </FormControl>
         <FormControl>
           <FormLabel htmlFor='virtualExercise'>Exercícios Virtuais</FormLabel>
-          <Input
-            type="number"
-            min={0}
-            max={10}
-            id='virtualExercise'
-            placeholder='Exercícios Virtuais'
-            {...form.register('virtualExercise', {
-              required: 'Obrigatório',
-            })}
-          />
+          <NumberInput control={form.control} name={'virtualExercise'} />
         </FormControl>
         <FormControl>
           <FormLabel htmlFor='presentialActivity'>Atividades Presenciais</FormLabel>
-          <Input
-            type="number"
-            min={0}
-            max={10}
-            id='presentialActivity'
-            placeholder='Atividades Presenciais'
-            {...form.register('presentialActivity', {
-              required: 'Obrigatório',
-            })}
-          />
+          <NumberInput control={form.control} name={'presentialActivity'} />
         </FormControl>
         <FormControl>
           <FormLabel htmlFor='exam'>Prova</FormLabel>
-          <Input
-            type="number"
-            id='exam'
-            min={0}
-            max={10}
-            placeholder='Prova'
-            {...form.register('exam', {
-              required: 'Obrigatório',
-            })}
-          />
+          <NumberInput control={form.control} name={'exam'} />
         </FormControl>
         <Button mt={4} colorScheme='teal' isLoading={form.formState.isSubmitting} type='submit'>
           Calcular

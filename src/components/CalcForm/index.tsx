@@ -13,16 +13,16 @@ const CalcFormComponent = () => {
     <form onSubmit={onSubmit}>
       <Box gap={'8px'}>
         <FormControl>
+          <FormLabel htmlFor='presentialActivity'>Atividades Presenciais</FormLabel>
+          <NumberInput control={form.control} name={'presentialActivity'} />
+        </FormControl>
+        <FormControl>
           <FormLabel htmlFor='virtualParticipation'>Participação Virtual</FormLabel>
           <NumberInput control={form.control} name={'virtualParticipation'} />
         </FormControl>
         <FormControl>
           <FormLabel htmlFor='virtualExercise'>Exercícios Virtuais</FormLabel>
           <NumberInput control={form.control} name={'virtualExercise'} />
-        </FormControl>
-        <FormControl>
-          <FormLabel htmlFor='presentialActivity'>Atividades Presenciais</FormLabel>
-          <NumberInput control={form.control} name={'presentialActivity'} />
         </FormControl>
         <FormControl>
           <FormLabel htmlFor='exam'>Prova</FormLabel>

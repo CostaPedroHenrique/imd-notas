@@ -14,6 +14,7 @@ interface ICalcForm {
 interface ICalcFormContextData {
   form: UseFormReturn<ICalcForm, any>
   onSubmit: (e?: React.BaseSyntheticEvent<object, any, any> | undefined) => Promise<void>
+  needsOnExam: string | undefined
 
 } 
 export type { ICalcFormProviderProps, ICalcFormContextData, ICalcForm }
